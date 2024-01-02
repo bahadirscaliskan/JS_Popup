@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Pop-up Örneği</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>JS Pop-up Örneği</h1>
+
+    <button onclick="showPopup()">Pop-up Göster</button>
+
+    <script>
+        function showPopup() {
+            // Pencere boyutu ve konumu için özellikler
+            var windowFeatures = "width=500,height=300,top=100,left=100";
+
+            // Pop-up içeriği
+            var popupContent = "<h2>Merhaba, Bu Bir Pop-up!</h2>";
+
+            // Pop-up penceresini aç
+            var popupWindow = window.open("", "Popup Penceresi", windowFeatures);
+            
+            // Pop-up içeriğini ekleyin
+            popupWindow.document.write(popupContent);
+        }
+    </script>
+
+</body>
+</html>
